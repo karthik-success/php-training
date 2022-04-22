@@ -1,19 +1,20 @@
 <?php
-echo 'While loop is :';
-$x=1;
-while ($x<=10) {
+$n= readline("Enter a number: ");
+for ($x = 0; $x <= $n; $x++) {
+    echo "The number is: $x \n";
+  }
+
+$a = readline('Enter an integer: ');
+$x=0;
+while ($x<=$a) {
     echo "The number is: $x \n";
     $x++;
 }
-$x = 1;
-echo "do While loop is : ";
+$b= readline("Enter a number: ");
+$x=0;
 do {
   echo "The number is: $x \n";
   $x++;
-} while ($x <= 10);
+}while ($x<=$b);
 
-echo "For loop: ";
-for ($x = 0; $x <= 10; $x++) {
-    echo "The number is: $x \n";
-  }
 ?>
