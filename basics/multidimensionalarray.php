@@ -8,7 +8,7 @@ $resumes=[
         "name"=>"karthik",
         "age"=>22,
         "emailid"=>"karthik@gmail.com ",
-        "phoneNo"=>638385879,
+        "phone_no"=>638385879,
         "about_me"=>"I am an Aspiring Engineer who loves to code",
         "skills"=>['tableau','machinelearning','mysql'],
         "backup_email_id"=>"karthikcrazy@gmail.com ",
@@ -17,8 +17,8 @@ $resumes=[
         "college_name"=>"Jain_College",
         "school_name"=>"Alagappa",
         "school_percentage"=>"90%",
-        "College_percentage"=>"70%",
-        "hobby"=>"Book reading",
+        "college_percentage"=>"70%",
+        "hobby"=>["Book reading","cycling"],
         "sports"=>['cricket','volleyball','Shuttle'],
         "qualities"=>['Leadership','Determination','Loyalty'],
         "address"=>[
@@ -28,80 +28,80 @@ $resumes=[
                 "city"=>"Chennai",
                 "pincode"=>600023
         
-        ],
-        "permanent_address"=>[
-            "doornumber"=>2,
-            "street_name"=>"aynavaram",
-            "city"=>"Chennai",
-            "pincode"=>600030
-    ]         
-
-    ]
-           
-    ],
-    "salary"=>[
-        "current_salary"=>[
-            "salary_range"=>"3LPA-5LPA"
-    ],
-    "expected_salary"=>[
-        "salary_range"=>"7LPA-10LPA"
-    ]
-    ],
-    [
-        "name"=>"cheran",
-        "age"=>28,
-        "emailid"=>"cheran@gmail.com ",
-        "phoneNo"=>6383854569,
-        "about_me"=>"I am an Aspiring Engineer who loves to code and I am senior developer",
-        "skills"=>['php','laravel','mysql','mongodb','css'],
-        "backup_email_id"=>"cheransengodiayan@gmail.com ",
-        "job_role"=>"Senior developer ",
-        "education"=>"mechanical engineer", 
-        "college_name"=>"savitha_College",
-        "school_name"=>"satya",
-        "school_percentage"=>"80%",
-        "College_percentage"=>"750%",
-        "hobby"=>"Book reading",
-        "sports"=>['cricket','volleyball','Shuttle','basketball'],
-        "qualities"=>['Leadership','Determination','Loyalty','good performer'],
-        "address"=>[
-            "current_address"=>[
+            ],
+            "permanent_address"=>[
                 "doornumber"=>2,
-                "street_name"=>"tnagar",
+                "street_name"=>"aynavaram",
                 "city"=>"Chennai",
-                "pincode"=>600027
-        
+                "pincode"=>600030
+            ]         
+
         ],
-        "permanent_address"=>[
-            "doornumber"=>5,
-            "street_name"=>"kodambakam",
-            "city"=>"Chennai",
-            "pincode"=>600035
-    ]         
+        "salary"=>[
+            "current_salary"=>[
+                "salary_range"=>"3LPA-5LPA"
 
-    ]
-           
-    ],
-    "salary"=>[
-        "current_salary"=>[
-            "salary_range"=>"5LPA-7LPA"
-    ],
-    "expected_salary"=>[
-        "salary_range"=>"9LPA-11LPA"
-    ]
-    ]
+            ],
+            "expected_salary"=>[
+                "salary_range"=>"7LPA-10LPA"
+            ]
 
+
+        ]  
+    ],
+    
     
     ];
-
+//echo $resume[0][0];
 foreach($resumes as $resume){
-    //echo "Personal information is <br>";
-    var_dump ($resume) ;
-    //echo $resume["age"];
-    //echo $resume["address"];
+    echo "Name =>".$resume['name']."\n"."<br>";
+    echo "Age =>".$resume['age']."\n"."<br>";
+    echo "Email_id =>".$resume['emailid']."\n"."<br>";
+    echo "Phone_no =>".$resume['phone_no']."\n"."<br>";
+    echo "About_me =>".$resume['about_me']."\n"."<br>";
+    echo "Skills =>".$resume['skills']."\n"."<br>";
+    echo "Backup_Email_id =>".$resume['backup_email_id']."\n"."<br>";
+    echo "Job_role =>".$resume['job_role']."\n.<br>";
+    echo "Education =>".$resume['education']."\n"."<br>";
+    echo "College_name =>".$resume['college_name']."\n"."<br>";
+    echo "School_name =>".$resume['school_name']."\n"."<br>";
+    echo "School_percentage =>".$resume['school_percentage']."\n"."<br>";
+    echo "College_percentage =>".$resume['college_percentage']."\n.<br>";
+    foreach($resume['hobby'] as $hobby){
+        echo "Hobby ::"."$hobby"."<br>";
+    }
+  
+    foreach($resume['sports'] as $sports){
+        echo "Sports ::"."$sports"."<br>";
+    }
+    foreach($resume['qualities'] as $qualities){
+        echo "Qualities ::"."$qualities"."<br>";
+    }
+
+    foreach($resume['address'] as $address){
+        echo "Address :: Door_number".$address["doornumber"]."\n"."<br>" ;
+        echo "Address :: street_name".$address["street_name"]."\n"."<br>";
+        echo "Address :: city".$address["city"]."\n"."<br>";
+        echo "Address ::  pincode".$address["pincode"]."\n"."<br>";
+
+    }
+    foreach($resume["salary"] as $salary){
+        echo "Salary=>".$salary["salary_range"]."\n"."<br>";
+      
+    }
+
+
+
+   
+
 }
 
-
+    //echo "Personal information is <br>";
+    //echo  "<pre>";
+    //var_dump ($resume) ;
+    //echo $resume[0][0];
+    //echo $resume["name"];
+    //echo "</pre>";
 
 ?>
 </body>
